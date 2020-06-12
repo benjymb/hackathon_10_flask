@@ -9,8 +9,10 @@ class CreateUsersTable(Migration):
         """
         with self.schema.create('users') as table:
             table.increments('id')
+            table.string('username')
+            table.string('password')
+            table.string('rol')
             table.string('name')
-            table.timestamps()
 
     def down(self):
         """
